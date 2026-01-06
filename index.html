@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calyx Workspace</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              // Branded Palette
+              'nexus-primary': '#4f46e5', // Indigo 600
+              'nexus-dark': '#111827',     // Gray 900
+              'nexus-teal': '#14b8a6',    // Teal 500
+              'nexus-yellow': '#f59e0b',   // Amber 500
+              'nexus-red': '#ef4444',      // Red 500
+              'nexus-purple': '#8b5cf6', // Violet 500
+              'nexus-blue': '#3b82f6',     // Blue 500
+
+              // Google Palette
+              'google-blue': '#4285F4',
+              'google-red': '#DB4437',
+              'google-yellow': '#F4B400',
+              'google-green': '#0F9D58',
+
+              // Dynamic Semantic Colors
+              primary: 'var(--primary)',
+              'primary-fg': 'var(--primary-fg)',
+              secondary: 'var(--secondary)',
+              'secondary-fg': 'var(--secondary-fg)',
+              
+              background: 'var(--background)',
+              surface: 'var(--surface)',
+              'surface-highlight': 'var(--surface-highlight)',
+              
+              border: 'var(--border)',
+              input: 'var(--input)',
+              
+              // Text hierarchy
+              main: 'var(--text-main)',
+              muted: 'var(--text-muted)',
+              inverted: 'var(--text-inverted)',
+
+              // Status colors (keep consistent)
+              success: '#10b981',
+              warning: '#f59e0b',
+              danger: '#ef4444',
+              info: '#3b82f6',
+            },
+            boxShadow: {
+              'card': '0 2px 8px rgba(0, 0, 0, 0.08)',
+              'float': '0 8px 30px rgba(0,0,0,0.12)'
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        /* New Light Theme Palette */
+        --primary: #4f46e5; /* nexus-primary */
+        --primary-fg: #ffffff;
+        --secondary: #475569; /* Slate 600 */
+        --secondary-fg: #ffffff;
+        
+        --background: #f8fafc; /* Slate 50 */
+        --surface: #ffffff;
+        --surface-highlight: #f1f5f9; /* Slate 100 */
+        
+        --border: #e2e8f0; /* Slate 200 */
+        --input: #f8fafc;
+        
+        --text-main: #111827; /* nexus-dark */
+        --text-muted: #6b7280; /* Gray 500 */
+        --text-inverted: #ffffff;
+      }
+
+      .dark {
+        /* New Dark Theme Palette */
+        --primary: #6366f1; /* Indigo 500 */
+        --primary-fg: #ffffff;
+        --secondary: #94a3b8; /* Slate 400 */
+        --secondary-fg: #0f172a;
+
+        --background: #0f172a; /* Slate 900 */
+        --surface: #1e293b; /* Slate 800 */
+        --surface-highlight: #334155; /* Slate 700 */
+
+        --border: #334155; /* Slate 700 */
+        --input: #1e293b;
+
+        --text-main: #f8fafc; /* Slate 50 */
+        --text-muted: #94a3b8; /* Slate 400 */
+        --text-inverted: #0f172a;
+      }
+
+      body {
+        background-color: var(--background);
+        color: var(--text-main);
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--border);
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--secondary);
+      }
+      
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.32.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/",
+    "three/": "https://esm.sh/three@^0.182.0/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
